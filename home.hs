@@ -33,6 +33,7 @@ testRk4  a b h=scanl rk  (a, y0) [a+h,a+2.0*h..b]
 t_2= testRk4 a b h
 t_2_f = my_filter t_2 0 10
 
+t_1_1_f=my_filter t_2 0 10
 main = do
   writeFile "ei100.txt" (show t_1_f)
   writeFile "rk100.txt" (show t_2_f)
